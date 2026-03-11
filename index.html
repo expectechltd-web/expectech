@@ -1,366 +1,1137 @@
-<!DOCTYPE HTML>
-<!--
-	ZeroFour by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>ZeroFour by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expectech Ltd — IT Services & Consultancy | Glasgow, UK</title>
+  <meta name="description" content="Expectech Ltd — Expert IT Services & Consultancy based in Glasgow, Scotland. Cloud solutions, cybersecurity, managed IT support, and digital transformation for UK businesses." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:    #0B1628;
+      --navy2:   #112040;
+      --blue:    #1A5CFF;
+      --blue2:   #2F74FF;
+      --cyan:    #00D4FF;
+      --white:   #F4F7FF;
+      --grey:    #8A9BB8;
+      --card-bg: #0F1E38;
+      --border:  rgba(255,255,255,0.07);
+      --radius:  14px;
+    }
 
-			<!-- Header -->
-				<div id="header-wrapper">
-					<div class="container">
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-						<!-- Header -->
-							<header id="header">
-								<div class="inner">
+    html { scroll-behavior: smooth; }
 
-									<!-- Logo -->
-										<h1><a href="index.html" id="logo">ZeroFour</a></h1>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
 
-									<!-- Nav -->
-										<nav id="nav">
-											<ul>
-												<li class="current_page_item"><a href="index.html">Home</a></li>
-												<li>
-													<a href="#">Dropdown</a>
-													<ul>
-														<li><a href="#">Lorem ipsum dolor</a></li>
-														<li><a href="#">Magna phasellus</a></li>
-														<li>
-															<a href="#">Phasellus consequat</a>
-															<ul>
-																<li><a href="#">Lorem ipsum dolor</a></li>
-																<li><a href="#">Phasellus consequat</a></li>
-																<li><a href="#">Magna phasellus</a></li>
-																<li><a href="#">Etiam dolore nisl</a></li>
-															</ul>
-														</li>
-														<li><a href="#">Veroeros feugiat</a></li>
-													</ul>
-												</li>
-												<li><a href="left-sidebar.html">Left Sidebar</a></li>
-												<li><a href="right-sidebar.html">Right Sidebar</a></li>
-												<li><a href="no-sidebar.html">No Sidebar</a></li>
-											</ul>
-										</nav>
+    /* ── UTILITY ── */
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 28px; }
+    .tag {
+      display: inline-block;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      background: rgba(0,212,255,0.08);
+      border: 1px solid rgba(0,212,255,0.25);
+      border-radius: 100px;
+      padding: 5px 14px;
+      margin-bottom: 18px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Syne', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: 8px;
+      padding: 14px 28px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .btn-primary {
+      background: var(--blue);
+      color: #fff;
+      border: none;
+    }
+    .btn-primary:hover { background: var(--blue2); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(26,92,255,0.4); }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.25);
+    }
+    .btn-outline:hover { border-color: var(--cyan); color: var(--cyan); transform: translateY(-2px); }
+    h1,h2,h3,h4 { font-family: 'Syne', sans-serif; line-height: 1.15; }
 
-								</div>
-							</header>
+    /* ── NOISE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.5;
+    }
 
-						<!-- Banner -->
-							<div id="banner">
-								<h2><strong>ZeroFour:</strong> A free responsive site template
-								<br />
-								built on HTML5 and CSS3 by <a href="http://html5up.net">HTML5 UP</a></h2>
-								<p>Does this statement make you want to click the big shiny button?</p>
-								<a href="#" class="button large icon solid fa-check-circle">Yes it does</a>
-							</div>
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 18px 0;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    nav.scrolled {
+      background: rgba(11,22,40,0.92);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.06);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-icon {
+      width: 36px; height: 36px;
+      background: var(--blue);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+    .logo span { color: var(--cyan); }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 36px;
+    }
+    .nav-links a {
+      color: var(--grey);
+      text-decoration: none;
+      font-size: 0.93rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { display: flex; gap: 12px; align-items: center; }
 
-					</div>
-				</div>
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px; height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
 
-			<!-- Main Wrapper -->
-				<div id="main-wrapper">
-					<div class="wrapper style1">
-						<div class="inner">
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 60% 40%, rgba(26,92,255,0.15) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 40% at 80% 80%, rgba(0,212,255,0.07) 0%, transparent 60%),
+        linear-gradient(160deg, var(--navy) 0%, var(--navy2) 100%);
+    }
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+    }
+    .hero-content {
+      position: relative;
+      max-width: 700px;
+    }
+    .hero h1 {
+      font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+      font-weight: 800;
+      margin-bottom: 24px;
+      line-height: 1.1;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--cyan);
+      position: relative;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--grey);
+      max-width: 540px;
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hero-stats {
+      display: flex;
+      gap: 48px;
+      margin-top: 72px;
+      flex-wrap: wrap;
+    }
+    .hero-stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--white);
+    }
+    .hero-stat-label {
+      font-size: 0.85rem;
+      color: var(--grey);
+      margin-top: 2px;
+    }
+    .hero-visual {
+      position: absolute;
+      right: -60px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 520px;
+      height: 520px;
+      pointer-events: none;
+    }
+    .hero-visual svg { width: 100%; height: 100%; }
 
-							<!-- Feature 1 -->
-								<section class="container box feature1">
-									<div class="row">
-										<div class="col-12">
-											<header class="first major">
-												<h2>This is an important heading</h2>
-												<p>And this is where we talk about why we’re <strong>pretty awesome</strong> ...</p>
-											</header>
-										</div>
-										<div class="col-4 col-12-medium">
-											<section>
-												<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-												<header class="second icon solid fa-user">
-													<h3>Here's a Heading</h3>
-													<p>And a subtitle</p>
-												</header>
-											</section>
-										</div>
-										<div class="col-4 col-12-medium">
-											<section>
-												<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-												<header class="second icon solid fa-cog">
-													<h3>Also a Heading</h3>
-													<p>And another subtitle</p>
-												</header>
-											</section>
-										</div>
-										<div class="col-4 col-12-medium">
-											<section>
-												<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-												<header class="second icon solid fa-chart-bar">
-													<h3>Another Heading</h3>
-													<p>And yes, a subtitle</p>
-												</header>
-											</section>
-										</div>
-										<div class="col-12">
-											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus. Praesent semper
-											bibendum ipsum, et tristique augue fringilla eu. Vivamus id risus vel dolor auctor euismod
-											quis eget mi. Etiam eu ante risus. Aliquam erat volutpat. Aliquam luctus mattis lectus sit
-											amet pulvinar. Nam nec turpis.</p>
-										</div>
-									</div>
-								</section>
+    /* animated rings */
+    @keyframes spin-slow { to { transform: rotate(360deg); } }
+    @keyframes spin-rev  { to { transform: rotate(-360deg); } }
+    @keyframes pulse-dot { 0%,100% { opacity:1; r:4; } 50% { opacity:0.4; r:2; } }
+    @keyframes float-up  { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-18px); } }
 
-						</div>
-					</div>
-					<div class="wrapper style2">
-						<div class="inner">
+    .ring1 { animation: spin-slow 18s linear infinite; transform-origin: 260px 260px; }
+    .ring2 { animation: spin-rev  12s linear infinite; transform-origin: 260px 260px; }
+    .core  { animation: float-up  6s ease-in-out infinite; }
 
-							<!-- Feature 2 -->
-								<section class="container box feature2">
-									<div class="row">
-										<div class="col-6 col-12-medium">
-											<section>
-												<header class="major">
-													<h2>And this is a subheading</h2>
-													<p>It’s important but clearly not *that* important</p>
-												</header>
-												<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-												Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-												Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-												consequat etiam.</p>
-												<footer>
-													<a href="#" class="button medium icon solid fa-arrow-circle-right">Let's do this</a>
-												</footer>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<header class="major">
-													<h2>This is also a subheading</h2>
-													<p>And is as unimportant as the other one</p>
-												</header>
-												<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-												Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-												Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-												consequat etiam.</p>
-												<footer>
-													<a href="#" class="button medium alt icon solid fa-info-circle">Wait, what?</a>
-												</footer>
-											</section>
-										</div>
-									</div>
-								</section>
+    /* ── SECTION COMMON ── */
+    section { padding: 100px 0; }
+    .section-header { text-align: center; margin-bottom: 64px; }
+    .section-header h2 { font-size: clamp(1.9rem, 3.5vw, 2.8rem); font-weight: 800; margin-bottom: 16px; }
+    .section-header p { color: var(--grey); max-width: 560px; margin: 0 auto; font-size: 1.05rem; }
 
-							</div>
-					</div>
-					<div class="wrapper style3">
-						<div class="inner">
-							<div class="container">
-								<div class="row">
-									<div class="col-8 col-12-medium">
+    /* ── SERVICES ── */
+    .services { background: var(--navy2); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--blue), var(--cyan));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .service-card:hover { border-color: rgba(26,92,255,0.4); transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+    .service-card:hover::before { opacity: 1; }
+    .service-icon {
+      width: 52px; height: 52px;
+      background: rgba(26,92,255,0.12);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+      border: 1px solid rgba(26,92,255,0.2);
+    }
+    .service-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .service-card p {
+      color: var(--grey);
+      font-size: 0.93rem;
+      line-height: 1.7;
+    }
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--cyan);
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: gap 0.2s;
+    }
+    .service-link:hover { gap: 10px; }
 
-										<!-- Article list -->
-											<section class="box article-list">
-												<h2 class="icon fa-file-alt">Recent Posts</h2>
+    /* ── WHY US ── */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .why-text h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; margin-bottom: 20px; }
+    .why-text p { color: var(--grey); margin-bottom: 16px; font-size: 0.98rem; }
+    .why-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin: 28px 0 36px; }
+    .why-list li {
+      display: flex; align-items: flex-start; gap: 12px;
+      color: var(--grey); font-size: 0.95rem;
+    }
+    .why-list li::before {
+      content: '✓';
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      background: rgba(0,212,255,0.1);
+      border: 1px solid rgba(0,212,255,0.3);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.7rem;
+      color: var(--cyan);
+      margin-top: 2px;
+    }
+    .why-card-stack { position: relative; }
+    .stack-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+    .stack-card + .stack-card { margin-top: 16px; }
+    .stack-card-head { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+    .stack-icon { font-size: 1.4rem; }
+    .stack-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; }
+    .stack-body { color: var(--grey); font-size: 0.88rem; }
 
-												<!-- Excerpt -->
-													<article class="box excerpt">
-														<a href="#" class="image left"><img src="images/pic04.jpg" alt="" /></a>
-														<div>
-															<header>
-																<span class="date">July 24</span>
-																<h3><a href="#">Repairing a hyperspace window</a></h3>
-															</header>
-															<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus
-															semper mod quisturpis nisi consequat etiam lorem. Phasellus quam turpis,
-															feugiat et sit amet ornare in, hendrerit in lectus semper mod quis eget mi dolore.</p>
-														</div>
-													</article>
+    /* ── PROCESS ── */
+    .process { background: var(--navy2); }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0;
+      position: relative;
+    }
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 36px; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), var(--border), transparent);
+    }
+    .process-step { padding: 0 32px 0 0; }
+    .step-num {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--blue);
+      margin-bottom: 28px;
+      position: relative;
+      z-index: 1;
+    }
+    .process-step h4 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
+    .process-step p { color: var(--grey); font-size: 0.88rem; }
 
-												<!-- Excerpt -->
-													<article class="box excerpt">
-														<a href="#" class="image left"><img src="images/pic05.jpg" alt="" /></a>
-														<div>
-															<header>
-																<span class="date">July 18</span>
-																<h3><a href="#">Adventuring with a knee injury</a></h3>
-															</header>
-															<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus
-															semper mod quisturpis nisi consequat etiam lorem. Phasellus quam turpis,
-															feugiat et sit amet ornare in, hendrerit in lectus semper mod quis eget mi dolore.</p>
-														</div>
-													</article>
+    /* ── INDUSTRIES ── */
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+    }
+    .industry-pill {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      text-align: center;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: border-color 0.3s, color 0.3s;
+      cursor: default;
+    }
+    .industry-pill .icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .industry-pill:hover { border-color: var(--blue); color: var(--cyan); }
 
-												<!-- Excerpt -->
-													<article class="box excerpt">
-														<a href="#" class="image left"><img src="images/pic06.jpg" alt="" /></a>
-														<div>
-															<header>
-																<span class="date">July 14</span>
-																<h3><a href="#">Preparing for Y2K38</a></h3>
-															</header>
-															<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus
-															semper mod quisturpis nisi consequat etiam lorem. Phasellus quam turpis,
-															feugiat et sit amet ornare in, hendrerit in lectus semper mod quis eget mi dolore.</p>
-														</div>
-													</article>
+    /* ── CTA BANNER ── */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--blue) 0%, #0A3EC9 100%);
+      border-radius: 20px;
+      padding: 72px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .cta-banner h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; margin-bottom: 16px; position: relative; }
+    .cta-banner p { color: rgba(255,255,255,0.8); font-size: 1.05rem; max-width: 520px; margin: 0 auto 36px; position: relative; }
+    .cta-banner .btn-outline { border-color: rgba(255,255,255,0.5); }
+    .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; }
+    .btn-white { background: #fff; color: var(--blue); }
+    .btn-white:hover { background: var(--white); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
 
-											</section>
-									</div>
-									<div class="col-4 col-12-medium">
+    /* ── CONTACT ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 56px;
+      align-items: start;
+    }
+    .contact-info h2 { font-size: clamp(1.7rem, 2.8vw, 2.2rem); font-weight: 800; margin-bottom: 16px; }
+    .contact-info p { color: var(--grey); margin-bottom: 36px; }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .contact-item-icon {
+      width: 42px; height: 42px;
+      background: rgba(26,92,255,0.12);
+      border: 1px solid rgba(26,92,255,0.2);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .contact-item-label {
+      font-size: 0.78rem;
+      color: var(--grey);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .contact-item-value {
+      font-size: 0.98rem;
+      font-weight: 500;
+    }
+    .contact-item-value a {
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-item-value a:hover { color: var(--cyan); }
+    .company-reg {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      font-size: 0.82rem;
+      color: var(--grey);
+      margin-top: 16px;
+    }
+    .company-reg strong { color: var(--white); }
 
-										<!-- Spotlight -->
-											<section class="box spotlight">
-												<h2 class="icon fa-file-alt">Spotlight</h2>
-												<article>
-													<a href="#" class="image featured"><img src="images/pic07.jpg" alt=""></a>
-													<header>
-														<h3><a href="#">Neural Implants</a></h3>
-														<p>The pros and cons. Mostly cons.</p>
-													</header>
-													<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus semper mod
-													quisturpis nisi consequat ornare in, hendrerit in lectus semper mod quis eget mi quat etiam
-													lorem. Phasellus quam turpis, feugiat sed et lorem ipsum dolor consequat dolor feugiat sed
-													et tempus consequat etiam.</p>
-													<p>Lorem ipsum dolor quam turpis, feugiat sit amet ornare in, hendrerit in lectus semper
-													mod quisturpis nisi consequat etiam lorem sed amet quam turpis.</p>
-													<footer>
-														<a href="#" class="button alt icon solid fa-file-alt">Continue Reading</a>
-													</footer>
-												</article>
-											</section>
+    .contact-form {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--grey);
+      margin-bottom: 8px;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 13px 16px;
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      transition: border-color 0.2s;
+      outline: none;
+      -webkit-appearance: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus { border-color: var(--blue); background: rgba(26,92,255,0.06); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-group select option { background: var(--navy2); }
+    .form-submit { width: 100%; justify-content: center; }
 
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+    /* ── FOOTER ── */
+    footer {
+      background: #080F1E;
+      border-top: 1px solid var(--border);
+      padding: 60px 0 32px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand p {
+      color: var(--grey);
+      font-size: 0.9rem;
+      margin-top: 16px;
+      line-height: 1.7;
+      max-width: 280px;
+    }
+    .footer-col h5 {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--grey);
+      margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: var(--cyan); }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom p { color: var(--grey); font-size: 0.83rem; }
+    .footer-legal { display: flex; gap: 20px; }
+    .footer-legal a { color: var(--grey); font-size: 0.83rem; text-decoration: none; transition: color 0.2s; }
+    .footer-legal a:hover { color: var(--white); }
 
-			<!-- Footer Wrapper -->
-				<div id="footer-wrapper">
-					<footer id="footer" class="container">
-						<div class="row">
-							<div class="col-3 col-6-medium col-12-small">
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.7s ease both; }
+    .delay-1 { animation-delay: 0.15s; }
+    .delay-2 { animation-delay: 0.3s; }
+    .delay-3 { animation-delay: 0.45s; }
+    .delay-4 { animation-delay: 0.6s; }
 
-								<!-- Links -->
-									<section>
-										<h2>Filler Links</h2>
-										<ul class="divided">
-											<li><a href="#">Quam turpis feugiat dolor</a></li>
-											<li><a href="#">Amet ornare in hendrerit </a></li>
-											<li><a href="#">Semper mod quisturpis nisi</a></li>
-											<li><a href="#">Consequat etiam phasellus</a></li>
-											<li><a href="#">Amet turpis, feugiat et</a></li>
-											<li><a href="#">Ornare hendrerit lectus</a></li>
-											<li><a href="#">Semper mod quis et dolore</a></li>
-											<li><a href="#">Amet ornare in hendrerit</a></li>
-											<li><a href="#">Consequat lorem phasellus</a></li>
-											<li><a href="#">Amet turpis, feugiat amet</a></li>
-											<li><a href="#">Semper mod quisturpis</a></li>
-										</ul>
-									</section>
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .nav-links, .nav-cta .btn-outline { display: none; }
+      .hamburger { display: flex; }
+      .why-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .hero-visual { display: none; }
+      .form-row { grid-template-columns: 1fr; }
+      .process-steps { gap: 40px; }
+      .process-steps::before { display: none; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 70px 0; }
+      .cta-banner { padding: 48px 28px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .contact-form { padding: 28px 20px; }
+    }
 
-							</div>
-							<div class="col-3 col-6-medium col-12-small">
+    /* Mobile nav */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--navy);
+      z-index: 200;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .mobile-nav a:hover { color: var(--cyan); }
+    .mobile-close {
+      position: absolute;
+      top: 24px; right: 28px;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
 
-								<!-- Links -->
-									<section>
-										<h2>More Filler</h2>
-										<ul class="divided">
-											<li><a href="#">Quam turpis feugiat dolor</a></li>
-											<li><a href="#">Amet ornare in in lectus</a></li>
-											<li><a href="#">Semper mod sed tempus nisi</a></li>
-											<li><a href="#">Consequat etiam phasellus</a></li>
-										</ul>
-									</section>
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" onclick="toggleNav()">✕</button>
+  <a href="#services" onclick="toggleNav()">Services</a>
+  <a href="#why" onclick="toggleNav()">Why Us</a>
+  <a href="#process" onclick="toggleNav()">Process</a>
+  <a href="#industries" onclick="toggleNav()">Industries</a>
+  <a href="#contact" onclick="toggleNav()">Contact</a>
+</div>
 
-								<!-- Links -->
-									<section>
-										<h2>Even More Filler</h2>
-										<ul class="divided">
-											<li><a href="#">Quam turpis feugiat dolor</a></li>
-											<li><a href="#">Amet ornare hendrerit lectus</a></li>
-											<li><a href="#">Semper quisturpis nisi</a></li>
-											<li><a href="#">Consequat lorem phasellus</a></li>
-										</ul>
-									</section>
+<!-- NAV -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">⚡</div>
+      Expec<span>tech</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#industries">Industries</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:07886896617" class="btn btn-outline" style="padding:10px 20px;font-size:0.88rem;">📞 Call Us</a>
+      <a href="#contact" class="btn btn-primary" style="padding:10px 20px;font-size:0.88rem;">Get a Quote</a>
+    </div>
+    <div class="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
 
-							</div>
-							<div class="col-6 col-12-medium imp-medium">
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="container" style="position:relative;">
+    <div class="hero-content">
+      <div class="tag fade-up">🇬🇧 Glasgow-Based IT Experts</div>
+      <h1 class="fade-up delay-1">
+        Powering Businesses with <em>Smart IT</em> Solutions
+      </h1>
+      <p class="fade-up delay-2">
+        Expectech Ltd delivers enterprise-grade IT services, cloud solutions, and strategic technology consultancy for businesses across Scotland and the UK. Trusted expertise, tailored for your goals.
+      </p>
+      <div class="hero-actions fade-up delay-3">
+        <a href="#contact" class="btn btn-primary">Get a Free Consultation →</a>
+        <a href="#services" class="btn btn-outline">Explore Services</a>
+      </div>
+      <div class="hero-stats fade-up delay-4">
+        <div>
+          <div class="hero-stat-num">100%</div>
+          <div class="hero-stat-label">UK-Based Support</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">24/7</div>
+          <div class="hero-stat-label">Monitoring & Support</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">Glasgow</div>
+          <div class="hero-stat-label">Headquartered, UK</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-								<!-- About -->
-									<section>
-										<h2><strong>ZeroFour</strong> by HTML5 UP</h2>
-										<p>Hi! This is <strong>ZeroFour</strong>, a free, fully responsive HTML5 site
-										template by <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</a>.
-										It's <a href="http://html5up.net/license/">Creative Commons Attribution</a>
-										licensed so use it for any personal or commercial project (just credit us
-										for the design!).</p>
-										<a href="#" class="button alt icon solid fa-arrow-circle-right">Learn More</a>
-									</section>
+  <!-- Animated Tech Visual -->
+  <div class="hero-visual">
+    <svg viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Outer ring -->
+      <g class="ring1">
+        <circle cx="260" cy="260" r="230" stroke="rgba(26,92,255,0.15)" stroke-width="1" stroke-dasharray="8 12"/>
+        <circle cx="260" cy="30"  r="6" fill="#1A5CFF" opacity="0.8"/>
+        <circle cx="490" cy="260" r="4" fill="#00D4FF" opacity="0.6"/>
+        <circle cx="260" cy="490" r="5" fill="#1A5CFF" opacity="0.7"/>
+      </g>
+      <!-- Inner ring -->
+      <g class="ring2">
+        <circle cx="260" cy="260" r="160" stroke="rgba(0,212,255,0.1)" stroke-width="1" stroke-dasharray="4 8"/>
+        <circle cx="260" cy="100" r="5" fill="#00D4FF" opacity="0.9"/>
+        <circle cx="420" cy="260" r="3" fill="#1A5CFF" opacity="0.7"/>
+      </g>
+      <!-- Core floating group -->
+      <g class="core">
+        <circle cx="260" cy="260" r="90" fill="rgba(26,92,255,0.08)" stroke="rgba(26,92,255,0.25)" stroke-width="1"/>
+        <circle cx="260" cy="260" r="60" fill="rgba(26,92,255,0.12)" stroke="rgba(26,92,255,0.3)" stroke-width="1"/>
+        <!-- Center icon -->
+        <rect x="230" y="230" width="60" height="60" rx="12" fill="rgba(26,92,255,0.6)" stroke="rgba(26,92,255,0.8)" stroke-width="1"/>
+        <text x="260" y="268" text-anchor="middle" font-size="24" fill="white">⚡</text>
+        <!-- Node dots -->
+        <circle cx="180" cy="200" r="5" fill="#00D4FF" opacity="0.8"/>
+        <line x1="185" y1="203" x2="233" y2="238" stroke="rgba(0,212,255,0.3)" stroke-width="1"/>
+        <circle cx="340" cy="200" r="4" fill="#1A5CFF" opacity="0.8"/>
+        <line x1="335" y1="203" x2="287" y2="238" stroke="rgba(26,92,255,0.3)" stroke-width="1"/>
+        <circle cx="180" cy="320" r="4" fill="#1A5CFF" opacity="0.7"/>
+        <line x1="184" y1="317" x2="233" y2="285" stroke="rgba(26,92,255,0.3)" stroke-width="1"/>
+        <circle cx="340" cy="320" r="5" fill="#00D4FF" opacity="0.9"/>
+        <line x1="335" y1="317" x2="287" y2="285" stroke="rgba(0,212,255,0.3)" stroke-width="1"/>
+      </g>
+    </svg>
+  </div>
+</section>
 
-								<!-- Contact -->
-									<section>
-										<h2>Get in touch</h2>
-										<div>
-											<div class="row">
-												<div class="col-6 col-12-small">
-													<dl class="contact">
-														<dt>Twitter</dt>
-														<dd><a href="#">@untitled-corp</a></dd>
-														<dt>Facebook</dt>
-														<dd><a href="#">facebook.com/untitled</a></dd>
-														<dt>WWW</dt>
-														<dd><a href="#">untitled.tld</a></dd>
-														<dt>Email</dt>
-														<dd><a href="#">user@untitled.tld</a></dd>
-													</dl>
-												</div>
-												<div class="col-6 col-12-small">
-													<dl class="contact">
-														<dt>Address</dt>
-														<dd>
-															1234 Fictional Rd<br />
-															Nashville, TN 00000-0000<br />
-															USA
-														</dd>
-														<dt>Phone</dt>
-														<dd>(000) 000-0000</dd>
-													</dl>
-												</div>
-											</div>
-										</div>
-									</section>
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">What We Do</div>
+      <h2>Comprehensive IT Services Built for Modern Business</h2>
+      <p>From day-to-day support to long-term digital transformation, we deliver the right technology solutions for your business.</p>
+    </div>
+    <div class="services-grid">
 
-							</div>
-							<div class="col-12">
-								<div id="copyright">
-									<ul class="menu">
-										<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</footer>
-				</div>
+      <div class="service-card">
+        <div class="service-icon">☁️</div>
+        <h3>Cloud Solutions</h3>
+        <p>Migrate, optimise, and manage your infrastructure in the cloud. Whether it's Microsoft Azure, AWS, or hybrid environments, we ensure seamless, secure, and cost-effective cloud adoption.</p>
+        <a href="#contact" class="service-link">Learn more →</a>
+      </div>
 
-		</div>
+      <div class="service-card">
+        <div class="service-icon">🛡️</div>
+        <h3>Cybersecurity</h3>
+        <p>Protect your business from evolving threats with our end-to-end security services — risk assessments, endpoint protection, penetration testing, and GDPR compliance support.</p>
+        <a href="#contact" class="service-link">Learn more →</a>
+      </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      <div class="service-card">
+        <div class="service-icon">🖥️</div>
+        <h3>Managed IT Support</h3>
+        <p>Proactive, 24/7 managed IT support that keeps your systems running smoothly. We act as your dedicated IT team — monitoring, maintaining, and resolving issues before they impact your business.</p>
+        <a href="#contact" class="service-link">Learn more →</a>
+      </div>
 
-	</body>
-</html>
+      <div class="service-card">
+        <div class="service-icon">🔄</div>
+        <h3>Digital Transformation</h3>
+        <p>We help businesses reimagine how they operate using technology — from process automation and ERP implementation to custom software development and AI-powered tools.</p>
+        <a href="#contact" class="service-link">Learn more →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🌐</div>
+        <h3>Network & Infrastructure</h3>
+        <p>Design, deployment, and management of resilient network infrastructure. Structured cabling, VPNs, SD-WAN, and remote working solutions built for reliability and performance.</p>
+        <a href="#contact" class="service-link">Learn more →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📊</div>
+        <h3>IT Consultancy</h3>
+        <p>Strategic technology consultancy to align your IT investments with your business goals. From IT audits and roadmaps to vendor management and technology procurement advice.</p>
+        <a href="#contact" class="service-link">Learn more →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-text">
+        <div class="tag">Why Expectech</div>
+        <h2>Local Expertise with Enterprise-Level Capability</h2>
+        <p>Founded in Glasgow in 2023, Expectech Ltd was built on a simple belief: businesses deserve straightforward, expert IT support without the complexity or inflated costs of big consultancies.</p>
+        <p>We're a Scottish company that understands the local business landscape — from Glasgow's growing tech scene to SMEs across Scotland — while bringing the technical depth to tackle complex enterprise challenges.</p>
+        <ul class="why-list">
+          <li>Dedicated account managers — real people who know your business</li>
+          <li>Fast response times with UK-based support, never offshore call centres</li>
+          <li>Transparent, fixed-fee pricing with no hidden costs</li>
+          <li>Vendor-agnostic advice — we recommend what's right for you</li>
+          <li>Fully compliant with UK GDPR and ICO data protection requirements</li>
+          <li>Flexible contracts tailored to your business needs and budget</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Talk to Our Team →</a>
+      </div>
+      <div class="why-card-stack">
+        <div class="stack-card">
+          <div class="stack-card-head">
+            <div class="stack-icon">🏆</div>
+            <div class="stack-title">Glasgow-Headquartered</div>
+          </div>
+          <div class="stack-body">Based at 11 Tulip Drive, Glasgow — close to the businesses we serve across Scotland and the wider UK.</div>
+        </div>
+        <div class="stack-card">
+          <div class="stack-card-head">
+            <div class="stack-icon">⚡</div>
+            <div class="stack-title">Rapid Response</div>
+          </div>
+          <div class="stack-body">Our team responds to critical incidents within the hour. Downtime costs money — we take urgency seriously.</div>
+        </div>
+        <div class="stack-card">
+          <div class="stack-card-head">
+            <div class="stack-icon">🤝</div>
+            <div class="stack-title">Long-Term Partnership</div>
+          </div>
+          <div class="stack-body">We don't just fix problems — we build lasting relationships and grow alongside our clients as their IT partners.</div>
+        </div>
+        <div class="stack-card">
+          <div class="stack-card-head">
+            <div class="stack-icon">🔒</div>
+            <div class="stack-title">Security-First Mindset</div>
+          </div>
+          <div class="stack-body">Every solution we design puts security at its core. Your data and systems are protected from day one.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">How We Work</div>
+      <h2>A Clear, Simple Process — No Jargon</h2>
+      <p>From first call to ongoing support, here's how we engage with every client to ensure outcomes that make a real difference.</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <h4>Discovery Call</h4>
+        <p>We start by understanding your business, current IT setup, pain points, and goals — completely free of charge and with no obligation.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <h4>IT Audit & Assessment</h4>
+        <p>Our engineers assess your existing infrastructure, security posture, and workflows to identify gaps and opportunities for improvement.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <h4>Tailored Proposal</h4>
+        <p>We present a clear, costed plan with transparent pricing — no surprises. You choose what fits your budget and priorities.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <h4>Implementation</h4>
+        <p>Our team deploys your solution with minimal disruption to your operations, keeping you informed at every stage.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">05</div>
+        <h4>Ongoing Support</h4>
+        <p>We monitor, maintain, and continuously improve your IT environment — and we're always just a call away when you need us.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section id="industries">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">Industries We Serve</div>
+      <h2>Sector Experience Across the UK</h2>
+      <p>We have hands-on experience delivering IT solutions across a wide range of industries — understanding the unique compliance, security, and operational demands of each.</p>
+    </div>
+    <div class="industries-grid">
+      <div class="industry-pill"><div class="icon">🏥</div>Healthcare</div>
+      <div class="industry-pill"><div class="icon">⚖️</div>Legal & Professional</div>
+      <div class="industry-pill"><div class="icon">🏗️</div>Construction</div>
+      <div class="industry-pill"><div class="icon">🏦</div>Finance</div>
+      <div class="industry-pill"><div class="icon">🎓</div>Education</div>
+      <div class="industry-pill"><div class="icon">🛒</div>Retail & E-commerce</div>
+      <div class="industry-pill"><div class="icon">🏭</div>Manufacturing</div>
+      <div class="industry-pill"><div class="icon">🏢</div>Property & Real Estate</div>
+      <div class="industry-pill"><div class="icon">🚛</div>Logistics</div>
+      <div class="industry-pill"><div class="icon">🎯</div>Marketing & Media</div>
+      <div class="industry-pill"><div class="icon">🌱</div>Startups & SMEs</div>
+      <div class="industry-pill"><div class="icon">🏛️</div>Public Sector</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section style="padding: 0 0 100px;">
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Ready to Transform Your IT Infrastructure?</h2>
+      <p>Get a free, no-obligation IT consultation with our Glasgow-based team. We'll assess your needs and outline a clear path forward.</p>
+      <div class="cta-actions">
+        <a href="#contact" class="btn btn-white">Book a Free Consultation</a>
+        <a href="tel:07886896617" class="btn btn-outline">📞 07886 896617</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="background: var(--navy2); padding-top: 100px; padding-bottom: 100px;">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="tag">Get in Touch</div>
+        <h2>Let's Start the Conversation</h2>
+        <p>Whether you need immediate IT support or want to discuss a longer-term technology strategy, our team is ready to help. Get in touch today.</p>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div>
+            <div class="contact-item-label">Office Address</div>
+            <div class="contact-item-value">11 Tulip Drive, Glasgow, G77 6FT<br/>Scotland, United Kingdom</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          <div>
+            <div class="contact-item-label">Phone</div>
+            <div class="contact-item-value"><a href="tel:07886896617">07886 896617</a></div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">📧</div>
+          <div>
+            <div class="contact-item-label">Email</div>
+            <div class="contact-item-value"><a href="/cdn-cgi/l/email-protection#6c09141c090f18090f040018082c0b010d0500420f0301"><span class="__cf_email__" data-cfemail="06637e7663657263656e6a726246616b676f6a2865696b">[email&#160;protected]</span></a></div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">🕐</div>
+          <div>
+            <div class="contact-item-label">Business Hours</div>
+            <div class="contact-item-value">Mon – Fri: 9:00am – 5:30pm<br/><span style="color:var(--grey);font-size:0.88rem;">Emergency support available 24/7</span></div>
+          </div>
+        </div>
+
+        <div class="company-reg">
+          <strong>Expectech Ltd</strong> — Registered in Scotland<br/>
+          Company No. <strong>SC790037</strong> · Incorporated <strong>21st November 2023</strong><br/>
+          Registered Office: 11 Tulip Drive, Glasgow, G77 6FT
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:8px;">Send Us a Message</h3>
+        <p style="color:var(--grey);font-size:0.88rem;margin-bottom:28px;">We'll get back to you within one business day.</p>
+
+        <form action="https://formspree.io/f/mwvroary" method="POST" id="contactForm">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="First Name" placeholder="John" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="Last Name" placeholder="Smith" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="Email" placeholder="john@yourcompany.co.uk" required />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="Phone" placeholder="+44 7xxx xxxxxx" />
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service of Interest</label>
+            <select id="service" name="Service of Interest" required>
+              <option value="" disabled selected>Select a service...</option>
+              <option>Managed IT Support</option>
+              <option>Cloud Solutions</option>
+              <option>Cybersecurity</option>
+              <option>IT Consultancy</option>
+              <option>Digital Transformation</option>
+              <option>Network & Infrastructure</option>
+              <option>General Enquiry</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="Message" placeholder="Tell us a bit about your business and what you're looking for..." required></textarea>
+          </div>
+
+          <!-- Formspree honeypot spam filter -->
+          <input type="text" name="_gotcha" style="display:none" />
+
+          <button type="submit" class="btn btn-primary form-submit" id="submitBtn">
+            Send Message →
+          </button>
+
+          <div id="formSuccess" style="display:none;margin-top:16px;padding:14px 18px;background:rgba(18,184,104,0.1);border:1px solid rgba(18,184,104,0.3);border-radius:8px;color:#12b868;font-size:0.9rem;text-align:center;">
+            ✓ Message sent! We'll be in touch within one business day.
+          </div>
+          <div id="formError" style="display:none;margin-top:16px;padding:14px 18px;background:rgba(255,80,80,0.1);border:1px solid rgba(255,80,80,0.3);border-radius:8px;color:#ff5050;font-size:0.9rem;text-align:center;">
+            ✕ Something went wrong. Please try again or call us directly.
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <div class="logo-icon">⚡</div>
+          Expec<span>tech</span>
+        </a>
+        <p>IT Services & Consultancy for businesses across Scotland and the UK. Expert technology solutions delivered with clarity and care.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Managed IT Support</a></li>
+          <li><a href="#services">Cloud Solutions</a></li>
+          <li><a href="#services">Cybersecurity</a></li>
+          <li><a href="#services">IT Consultancy</a></li>
+          <li><a href="#services">Digital Transformation</a></li>
+          <li><a href="#services">Network & Infrastructure</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#why">About Us</a></li>
+          <li><a href="#process">How We Work</a></li>
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:07886896617">07886 896617</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#096c71796c6a7d6c6a61657d6d496e64686065276a6664"><span class="__cf_email__" data-cfemail="acc9d4dcc9cfd8c9cfc4c0d8c8eccbc1cdc5c082cfc3c1">[email&#160;protected]</span></a></li>
+          <li><a href="#">Glasgow, G77 6FT</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Expectech Ltd. Company No. SC790037. Registered in Scotland.</p>
+      <div class="footer-legal">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Mobile nav toggle
+  function toggleNav() {
+    document.getElementById('mobileNav').classList.toggle('open');
+    document.body.style.overflow = document.getElementById('mobileNav').classList.contains('open') ? 'hidden' : '';
+  }
+
+  // Formspree AJAX submission
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      const success = document.getElementById('formSuccess');
+      const error = document.getElementById('formError');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      success.style.display = 'none';
+      error.style.display = 'none';
+      try {
+        const response = await fetch('https://formspree.io/f/mwvroary', {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          success.style.display = 'block';
+          contactForm.reset();
+        } else {
+          error.style.display = 'block';
+        }
+      } catch(err) {
+        error.style.display = 'block';
+      }
+      btn.textContent = 'Send Message →';
+      btn.disabled = false;
+    });
+  }
+
+  // Intersection Observer for scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e
